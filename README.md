@@ -1,6 +1,6 @@
 # PV Timesheet Dashboard
 
-A real-time team timesheet analytics dashboard for **PV Advisory LLP**, built on top of Odoo ERP. It pulls timesheet data via the Odoo XML-RPC API, aggregates it server-side, and presents it as a clean interactive dashboard with filtering, drill-downs, and charts.
+A real-time team timesheet analytics dashboard built on top of Odoo ERP. It pulls timesheet data via the Odoo XML-RPC API, aggregates it server-side, and presents it as a clean interactive dashboard with filtering, drill-downs, and charts.
 
 ---
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PV Timesheet Dashboard</title>
-  <meta name="description" content="PV Advisory LLP – Team timesheet analytics dashboard with project, employee, and task insights." />
+  <meta name="description" content="Team timesheet analytics dashboard with project, employee, and task insights." />
   <link rel="icon" href="{{ url_for('public_static', filename='PV_Logo.png') }}" type="image/png" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -1030,7 +1030,6 @@ footer strong { color: var(--muted); font-weight: 600; }
     <img src="{{ url_for('public_static', filename='PV_Logo.png') }}" alt="PV Logo" class="pv-logo" />
     <div class="logo-text">
       <h1>Timesheet Analytics</h1>
-      <p>PV Advisory LLP</p>
     </div>
   </div>
 
@@ -1513,8 +1512,7 @@ footer strong { color: var(--muted); font-weight: 600; }
 </main>
 
 <footer>
-  <strong>PV Advisory LLP</strong> &nbsp;·&nbsp; © <span id="footer-year"></span>
-  &nbsp;·&nbsp; Timesheet Analytics Dashboard
+  © <span id="footer-year"></span> &nbsp;·&nbsp; Timesheet Analytics Dashboard
 </footer>
 
 <!-- ══════════════════════════ THEME SCRIPT ══════════════════════════ -->
@@ -2099,6 +2097,9 @@ footer strong { color: var(--muted); font-weight: 600; }
     gp.innerHTML = '<option value="ALL">All projects</option>';
     employees.forEach(e => { const o=document.createElement('option'); o.value=e.name; o.textContent=e.name; ge.appendChild(o); });
     projects.forEach(p  => { const o=document.createElement('option'); o.value=p.name; o.textContent=p.name; gp.appendChild(o); });
+    // Restore active filter selections after rebuilding options
+    if (GLOBAL_FILTERS.employee) ge.value = GLOBAL_FILTERS.employee;
+    if (GLOBAL_FILTERS.project)  gp.value = GLOBAL_FILTERS.project;
   }
 
   async function applyGlobalFilters() {
