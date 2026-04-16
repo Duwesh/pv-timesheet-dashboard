@@ -1,0 +1,23 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# graphify temp files
+.graphify_*.json
+.graphify_*.txt
+graphify-out/
+
+# OS
+.DS_Store
+Thumbs.db
