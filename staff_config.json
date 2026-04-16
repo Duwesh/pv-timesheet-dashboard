@@ -1,0 +1,16 @@
+{
+  "new_employees": ["Sahil Rana"],
+  "resigned_employees": ["Anant Jain", "Umesh Chandra Dani"],
+  "non_billable_tasks": [
+    "Leave",
+    "Fun Friday",
+    "Holiday",
+    "Public Holiday",
+    "Internal Meeting"
+  ],
+  "leave_tasks": [
+    "Leave",
+    "Holiday",
+    "Public Holiday"
+  ]
+}
